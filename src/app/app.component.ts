@@ -3,7 +3,7 @@ import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
-  template: `<div>Hello {{value}}. Message from Azure Function: {{message$ | async}}</div>`,
+  template: `<div>Hello {{value}}. Message from Azure Function: {{message$ | async}}</div><app-login></app-login>`,
 })
 export class AppComponent {
   value = 'World';
