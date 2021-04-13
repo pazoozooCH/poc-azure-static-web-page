@@ -9,8 +9,8 @@ export function configureAuth(oidcConfigService: OidcConfigService): () => Promi
             stsServer: 'https://login.microsoftonline.com/5a35dd12-2027-4c00-b63a-cc5076fec4b9/v2.0',
             authWellknownEndpoint: 'https://login.microsoftonline.com/common/v2.0',
             redirectUrl: window.location.origin,
-            clientId: 'please-enter-clientId',
-            scope: 'please-enter-scopes', // 'openid profile offline_access ' + your scopes
+            clientId: '28c6103a-caba-485e-ac2c-0888c9e992f8',
+            scope: 'openid profile offline_access', // 'openid profile offline_access ' + your scopes
             responseType: 'code',
             silentRenew: true,
             useRefreshToken: true,
