@@ -1,7 +1,12 @@
 <div>
-  <strong>Authenticated: </strong><i>{{ authenticated$ | async }}</i>
+  <h3>Login</h3>
   <div>
     <button (click)="login()">Login</button>
     <button (click)="logout()">Logout</button>
   </div>
+  <h3>Login Information</h3>
+  <ul>
+  <li><strong>Authenticated: </strong><i>{{ authenticated$ | async }}</i></li>
+  <li><strong>User Data: </strong><i>{{ userData$ | async }}</i></li>
+</ul>
 </div>

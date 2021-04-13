@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,10 @@ import { OidcSecurityService } from 'angular-auth-oidc-client';
 })
 export class LoginComponent {
   authenticated$ = this.oidcSecurityService.checkAuth();
+  userData$ = this.oidcSecurityService.userData$.pipe(
+    map(userData => JSON.stringify(userData, null, 2)),
+    startWith("not logged in")
+  );
 
   constructor(private oidcSecurityService: OidcSecurityService) { }
 

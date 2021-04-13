@@ -15,7 +15,7 @@ export function configureAuth(oidcConfigService: OidcConfigService): () => Promi
             silentRenew: true,
             useRefreshToken: true,
             maxIdTokenIatOffsetAllowedInSeconds: 600,
-            issValidationOff: false,
+            issValidationOff: true,
             autoUserinfo: false,
             customParams: {
               prompt: 'select_account', // login, consent
